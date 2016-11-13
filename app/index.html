@@ -7,28 +7,12 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-    <div ng-init='greeting="Hello "'>
-      {{ greeting }}, Nice to meet you!
-    </div>
-    <div ng-init='value=100'>
-    	{{ value + 20 }}
-    </div>
-    <input type="text" ng-model="name" ng-init="name='Enter your name'" ng-change="isChanged=true"><br>
-	<span ng-if="isChanged">{{greeting + name}}</span>
-
-	<br><br>
-	<div ng-init="stuff=['a','b','c','d','e','f',]; index=0">
-	Enter Element: <input type="text" ng-model="index"><br>
-	Array Element {{index}} is {{ stuff[index]}}
+<body> 
+    <div ng-init="months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']">
 	</div>
-	<br><br>
-	<div ng-init="months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']"></div>
-	<ul class="horz">
-		<li ng-repeat="month in months">{{month}}</li>
-	</ul>
-	
+    What month were you born in? (Enter number) <input type="text" ng-model="monthNum" ng-init="monthNum=1"/><br>
+    That month was {{months[monthNum-1]}}
+  </body>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </body>
