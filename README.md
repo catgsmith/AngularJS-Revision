@@ -1,4 +1,4 @@
-# ITAG, GMIT & SITE POINT Exercises 
+Part 1 - Controllers
 
-This is the seed project for AngularJS 1 Exercises.
-Command to launch: gulp
+1.	Write an AngularJS application that has a Controller which is associated with an element.
+The Controller should contain code to print out “Hello from Controller” in an alert box.
