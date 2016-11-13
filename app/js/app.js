@@ -1,9 +1,7 @@
-(function() {
-
-    var app = angular.module("myApp", []);
-
-    app.controller("mainController", function() { 
-        alert("Hello from controller!");
-    });
-
-}());
+angular.module("myApp", [])
+.controller("mainController", function() { 
+        alert("Hello from mainController!");
+    })
+.controller("secondController", function() { 
+    alert("Hello from secondController!");
+});

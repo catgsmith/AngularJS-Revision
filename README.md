@@ -1,4 +1,11 @@
-Part 1 - Controllers
+#Part 1 - Controllers
 
-1.	Write an AngularJS application that has a Controller which is associated with an element.
-The Controller should contain code to print out “Hello from Controller” in an alert box.
+2.	Write an Angular JS application that has 2 Controllers – MainController and SecondController. Each Controller displays an alert saying “Hello from ControllerName” i.e. MainController or SecondController.
+The View (HTML) has 2 div elements - one of which is associated with the MainController and one which is not associated with any Controller.
+What alerts are shown and why?
+
+3.	Using the AngularJS application from the previous question associate the 2nd div element with SecondController.
+Now add a new div element which is also associated with SecondController.
+What alerts are shown and why?
+
+
