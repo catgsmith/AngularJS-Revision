@@ -2,10 +2,12 @@
 
     var app = angular.module("myApp", []);
 
-    app.directive("myFirstDirective", function() {
+    app.directive("newDirective", function() {
         return {
-            template: "<h4>This is My First Directive</h4>",
+        	restrict: 'C',
+            template: "<h3>By default, Directives apply to Elements and Attributes</h3>",
         };
     });
+    /* Elements 	E, Attributes	A, Class		C */
 
 }());
