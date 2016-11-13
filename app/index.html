@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
@@ -7,13 +7,10 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-    <div ng-init="months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']">
-	</div>
-    What month were you born in? (Enter number) <input type="text" ng-model="monthNum" ng-init="monthNum=1"/><br>
-    That month was {{months[monthNum-1]}}
-  
-
+<body>
+  <my-first-directive></my-first-directive>
+  
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>

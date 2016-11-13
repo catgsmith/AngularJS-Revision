@@ -1,6 +1,10 @@
 # GMIT LAB 4 
 
-Question 6. 
-Write an Angular JS application that has an array consisting of the months of the year and an input field that asks the user to enter the month number he/she was born in (Jan=1, … Dec=12).
-	When the month number is input the month name is automatically shown.
-	The default month is January.
+Part 3 Custom Directives	
+Write an AngularJS application that includes the following HTML:
+    <my-first-directive></my-first-directive>
+	and looks as follows:
+		This is My First Directive
+	(The text above should be in a h4 element).
+	Write the custom AngularJS directive to achieve this.
+
