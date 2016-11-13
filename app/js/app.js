@@ -1,5 +1,1 @@
-(function() {
-
-    // this is an empty IIFE
-
-}());
+angular.module('myApp', ['myApp.controllers']);
