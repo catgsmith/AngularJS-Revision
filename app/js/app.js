@@ -1,7 +1,5 @@
 angular.module("myApp", [])
-.controller("mainController", function() { 
-        alert("Hello from mainController!");
-    })
-.controller("secondController", function() { 
-    alert("Hello from secondController!");
-});
+    .controller('MainController', function($scope) {  
+        $scope.myName = "Catherine"; 
+        $scope.age = "45";
+    });

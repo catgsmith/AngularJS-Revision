@@ -6,11 +6,11 @@
     <title>Lab 5 Part 1 - Controllers</title>
 </head>
 
-<body>
-    <div ng-controller="mainController"></div>
+<body ng-controller="MainController">
+	    {{ myName + " length: " + myName.length}}
+		<br>
+		Last year I was {{ age - 1 }} years old.
 
-    <div ng-controller="secondController"></div>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="js/app.js"></script>
 </body>
