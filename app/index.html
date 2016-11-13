@@ -7,14 +7,22 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
-  
-<body ng-app="myApp" > 
-	<div class="new-directive"></div>
-	<!-- <div new-directive></div> -->
-    <!-- <new-directive></new-directive> -->
-  
+
+<body ng-app="myApp">
+    <my-custom-template></my-custom-template>
+    
+    <script type="text/ng-template" id="template1.html">
+        <h3>My List</h3>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 
 </html>
+
+

@@ -2,12 +2,12 @@
 
     var app = angular.module("myApp", []);
 
-    app.directive("newDirective", function() {
+    app.directive("myCustomTemplate", function() {
         return {
-        	restrict: 'C',
-            template: "<h3>By default, Directives apply to Elements and Attributes</h3>",
+            restrict: 'E',
+            templateUrl: "template1.html"
         };
     });
-    /* Elements 	E, Attributes	A, Class		C */
 
 }());
+
