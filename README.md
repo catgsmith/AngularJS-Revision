@@ -10,7 +10,8 @@ Given the following HTML code:
 		<li>BSc. Computer Science</li>
 		<li>BSc. Web Technologies & Programming</li>
 	</ul>
-  </body>```
+  </body>
+```
 
 Write the AngularJS directives so that when displayed, the above webpage looks as follows:
 
