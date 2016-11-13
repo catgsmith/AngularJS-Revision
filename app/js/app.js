@@ -1,5 +1,5 @@
 (function() {
 
-    angular.module('app', []);
+    // Empty IIFE
 
 }());
