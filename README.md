@@ -1,8 +1,12 @@
 #Part 1 - Controllers
 
-4. Write an AngularJS application that has the a $scope variable called myName which is your name.
-	In the view show the value of myName and its length.
-	Add another $scope variable called age which is your age.
-In the view show the age you were last year by using an expression.
+5.	Write an AngularJS application that has a $scope object called Connaught, which has the following properties:
+•	population: 545000
+•	numCounties: 5
+•	counties: An array consisting of "Galway", "Leitrim", "Mayo", "Roscommon" and "Sligo".
+•	largestTown: Galway
+•	founded: November 12th 988
+•	avgIndWage: 36500.00
+
 
 
