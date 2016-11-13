@@ -5,6 +5,7 @@
     <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,6 +18,18 @@
     <input type="text" ng-model="name" ng-init="name='Enter your name'" ng-change="isChanged=true"><br>
 	<span ng-if="isChanged">{{greeting + name}}</span>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<br><br>
+	<div ng-init="stuff=['a','b','c','d','e','f',]; index=0">
+	Enter Element: <input type="text" ng-model="index"><br>
+	Array Element {{index}} is {{ stuff[index]}}
+	</div>
+	<br><br>
+	<div ng-init="months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']"></div>
+	<ul class="horz">
+		<li ng-repeat="month in months">{{month}}</li>
+	</ul>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </body>
 </html>
