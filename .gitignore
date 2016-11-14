@@ -3,4 +3,17 @@ node_modules
 .tmp
 .sass-cache
 **/img/*
+**.min.css
 *.ico
+**/ionic/
+# exclude specific
+*.zip
+*.docx
+server.js
+platforms/
+plugins/
+scss/
+jquery/
+resources/
+!*.json
+
