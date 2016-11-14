@@ -1,12 +1,7 @@
 #Part 1 - Controllers
 
-5.	Write an AngularJS application that has a $scope object called Connaught, which has the following properties:
-•	population: 545000
-•	numCounties: 5
-•	counties: An array consisting of "Galway", "Leitrim", "Mayo", "Roscommon" and "Sligo".
-•	largestTown: Galway
-•	founded: November 12th 988
-•	avgIndWage: 36500.00
-
-
+Question 6
+Write an AngularJS application that allows the user to enter a name. Each time the “Add Name” button is pressed, the name just entered is added to an array of names which is then displayed in the view along with the number of characters in the name, as an ordered list.
+	The heading of the list should state the number of names in the array.
+	A “Remove Last Name” button should remove the last item in the array when pressed.
 
