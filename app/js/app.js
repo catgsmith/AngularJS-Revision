@@ -1,33 +1,55 @@
 angular.module("myApp", [])
-    .controller('MainController', function($scope) {  
-        $scope.names = [];
-        $scope.addName = function( name ) {
-        	var isFound = false;
-        	for(var i=0; i < $scope.names.length; i++){
-        		if($scope.names[i] === name) {
-        			isFound = true;
+.controller('MainController', function($scope) {  
+	$scope.basket=[];
+	$scope.getBasketTotal = function() {
+		var total = 0;
+		for (var i = 0; i < $scope.basket.length; i++) {
+			total += ($scope.basket[i]["prod"].price * $scope.basket[i].qty);
+		}
+		return total;
+	};
+
+    var Product = function(name, price) {
+        this.name = name;
+        this.price = price;
+
+        this.addToBasket = function() {
+            var isNewItem = true;
+            for (var i = 0; i < $scope.basket.length; i++) {
+         
+                if ($scope.basket[i]["prod"].name === this.name) {
+                    $scope.basket[i].qty++;
+                    isNewItem = false;
+                    break;
+                }
+
+            }
+            if (isNewItem) {
+                $scope.basket.push({prod: this, qty: 1});
+            }
+        };
+        this.removeFromBasket = function() {
+        	
+        	for (var i = 0; i < $scope.basket.length; i++) {
+        		if( $scope.basket[i]["prod"].name === this.name ) {
+        			$scope.basket[i].qty--;
+
+        			if($scope.basket[i].qty < 1 ) {
+        				$scope.basket.splice(i,1);
+        			}
         			break;
         		}
-        	}
-        	// add name to array
-        	if (!isFound) {
-        		$scope.names.push(name);
-        	} else {
-        		console.log("ng-repeat crashes if duplicates found");
+        		
         	}
         };
-        $scope.removeName  = function (name) {
-        	for(var i=0; i < $scope.names.length; i++){
-        		if($scope.names[i] === name) {
-        			$scope.names.splice(i,1);
-        			break;
-        		}
-        	}
-        };
-        $scope.removeLastName = function(){
-        	if($scope.names.length > 0 ) {
-        		var name = $scope.names.pop();
-        		console.log('Removed '+ name +' from the list');
-        	}
-        };
+    };
+
+	$scope.products = [
+		new Product('Bread', 1.99),
+		new Product('Wine', 10.12),
+		new Product('Cheese', 3.45)
+	];
+
+
+
     });

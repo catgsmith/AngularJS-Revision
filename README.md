@@ -1,7 +1,11 @@
 #Part 1 - Controllers
 
-Question 6
-Write an AngularJS application that allows the user to enter a name. Each time the “Add Name” button is pressed, the name just entered is added to an array of names which is then displayed in the view along with the number of characters in the name, as an ordered list.
-	The heading of the list should state the number of names in the array.
-	A “Remove Last Name” button should remove the last item in the array when pressed.
+Question 7
 
+Write an AngularJS Shopping Basket Application that looks as follows:
+
+When the Add button is pressed, the relevant product is added to the shopping basket, the item count for that item increases by one, and the total price of items in the shopping basket is also increased by the price of the product.
+
+When the Remove button is pressed, the relevant product is removed from the shopping basket – but only if at least one such product already exists in the shopping basket, the item count for that item decreases by one, and the total price of items in the shopping basket is also decreased by the price of the product.
+
+The Product Name and Price can be hardcoded in the JS (not the HTML) part of the application.

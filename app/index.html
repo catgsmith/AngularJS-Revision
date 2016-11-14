@@ -7,14 +7,17 @@
 </head>
 
 <body ng-controller="MainController">
-    <input type="text" ng-model="thisName">
-    <button ng-click="addName( thisName )">Add Name</button><br><br>
-    <button ng-click="removeLastName()">Remove Last Name</button><br><br>
-	<button ng-click="removeName( thisName )">Remove Name</button>
-	<h3>{{ names.length }} Names</h3>
-    <ol>
-    	<li ng-repeat="name in names">{{name + ' ('+ name.length +')'}}</li>
-    </ol>
+    <div ng-repeat="product in products">{{product.name}} {{product.price | currency : "€"}} 
+	<button ng-click="product.addToBasket()">Add</button>	
+	<button ng-click="product.removeFromBasket()">Remove</button>
+    </div>
+    <p>
+    	<span ng-repeat="item in basket">{{ item["prod"].name + " Items: " + item.qty}} </span>
+    	<br>
+    	Total Price: {{ getBasketTotal() | currency : "€"}}
+    </p>
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="js/app.js"></script>
 </body>
