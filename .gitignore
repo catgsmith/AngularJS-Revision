@@ -16,4 +16,4 @@ scss/
 jquery/
 resources/
 !*.json
-
+www/service-worker.js

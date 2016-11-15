@@ -1,18 +1,30 @@
 angular.module('starter.controllers', [])
-    .controller('MainController', function($scope, ageService) {
+    .controller('StudentController', function($scope, dateService) {
+    	function Student(name, address, dob) {
+    	    this.name = name;
+    	    this.address = address;
+    	    this.dob = dateService.formatDate(dob);
+    	    this.getAge = function() {
+    	    	return dateService.calculateAge(this.dob);
+    	    };
+    	}
+
 		
-        $scope.getAgeNextYear = function(ageString) {
+        $scope.students = [
+        	new Student("Tom", "Galway", "November 19th 1995"),
+        	new Student("John", "Tuam", "August 11th 1996"),
+        	new Student("Mary", "Balinasloe", "September 1st 1995"),
+        	new Student("Fred", "Athenry", "August 11th 1994")
+        ];
+    })
+    .controller('GMITController', function($scope, dateService){
 
-            console.log("target MainController age" + ageString);
-			$scope.result = "??";
-
-            var age = parseInt(ageString);
-            if (isNaN(age)) {     
-            	console.log("You didn't enter a number");
-            } else if (age < 0) {
-                console.log("Number entered is invalid");   
-       		} else {
-       			$scope.result = ageService.getAgeNextYear(age);
-       		}
-        };
+    	$scope.GMIT = {
+    		name: "Galway-Mayo Institute of Technology",
+    		address: ["Galway, Letterfrack,", "Mountbellew, Castlebar"],
+    		founded: dateService.formatDate("September 18th 1972")
+    	};
+    	$scope.GMIT.getCurrentAge = function () {    		
+    		return dateService.calculateAge(this.founded);
+    	};
     });
