@@ -1,11 +1,14 @@
 #Part 1 - Controllers
 
-Question 7
+Question 8
 
-Write an AngularJS Shopping Basket Application that looks as follows:
+Write an AngularJS that has the following behaviour:
+•	The Get Name button, when pressed, allows the user to enter their name/email or any string, which is then displayed next to the button.
 
-When the Add button is pressed, the relevant product is added to the shopping basket, the item count for that item increases by one, and the total price of items in the shopping basket is also increased by the price of the product.
+•	The First character of the string entered, along with its length, is displayed.
 
-When the Remove button is pressed, the relevant product is removed from the shopping basket – but only if at least one such product already exists in the shopping basket, the item count for that item decreases by one, and the total price of items in the shopping basket is also decreased by the price of the product.
+•	An input field allows the user to enter the characters of the name to be printed e.g. Every 1st, 2nd 3rd etc. character.
 
-The Product Name and Price can be hardcoded in the JS (not the HTML) part of the application.
+•	If an invalid/negative number is entered the entire string is displayed.
+
+•	If a valid number is entered, e.g. 3, every 3rd character of the string should be displayed.
